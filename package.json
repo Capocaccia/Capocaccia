@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "jsdom": "^22.0.0",
+    "octokit": "^2.0.14"
+  }
+}

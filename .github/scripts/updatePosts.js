@@ -5,7 +5,7 @@ const fs = require('fs')
 const { Octokit, App } = require("octokit");
 
 axios
-  .get("http://localhost:3000")
+  .get("https://www.capocaccia.dev/")
   .then(function (response) {
     const dom = new JSDOM(response.data);
     const header = dom.window.document.querySelector('[data-testid="hero-header"]');

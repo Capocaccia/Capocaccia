@@ -18,7 +18,7 @@ axios
       await octoClient.repos.deleteFile({
         // replace the owner and email with your own details
         owner: "Capocaccia",
-        repo: "Capocacaccia/Capocaccia",
+        repo: "Capocaccia/Capocaccia",
         path: "README.md",
         message: "Updates readme",
         content: readMeContentEncoded,

@@ -13,14 +13,11 @@ axios
     const excerpt = dom.window.document.querySelector('[data-testid="hero-post-excerpt"]')
     const content = `${header.textContent} - ${excerpt.textContent}`
     const octoClient = new Octokit({auth: process.env['GITHUB_TOKEN']})
-    const repo = process.env['GITHUB_REPOSITORY']
-    const readMeContent = fs.readFileSync("./readMe.md", "utf-8");
-    const readMeContentEncoded = Base64.encode(content);
-    octokit.repos.createOrUpdateFileContents({
+    octoClient.repos.createOrUpdateFileContents({
       // replace the owner and email with your own details
       owner: "Capocaccia",
       repo: "Capocaccia",
-      path: "readMe.md",
+      path: "README.md",
       message: "Updates readme",
       content: contentEncoded,
       committer: {

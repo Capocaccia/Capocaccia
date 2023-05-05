@@ -1,7 +1,11 @@
 {
   "devDependencies": {
     "axios": "^1.4.0",
-    "jsdom": "^22.0.0",
-    "octokit": "^2.0.14"
+    "jsdom": "^22.0.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^19.0.7",
+    "dotenv": "^16.0.3",
+    "js-base64": "^3.7.5"
   }
 }

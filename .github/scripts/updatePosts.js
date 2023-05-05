@@ -14,6 +14,22 @@ axios
     const content = `${header.textContent} - ${excerpt.textContent}`
     const octoClient = new Octokit({auth: process.env['GITHUB_TOKEN']})
     const readMeContentEncoded = Base64.encode(content);
+    octoClient.repos.deleteFile({
+      // replace the owner and email with your own details
+      owner: "Capocaccia",
+      repo: "Capocaccia",
+      path: "README.md",
+      message: "Updates readme",
+      content: readMeContentEncoded,
+      committer: {
+        name: `Octokit Bot`,
+        email: "carter.capocaccia@gmail.com",
+      },
+      author: {
+        name: "Octokit Bot",
+        email: "carter.capocaccia@gmail.com",
+      },
+    })
     octoClient.repos.createOrUpdateFileContents({
       // replace the owner and email with your own details
       owner: "Capocaccia",

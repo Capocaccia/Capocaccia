@@ -53,6 +53,6 @@ axios
     }
 
     deletefile();
-    updateFile();
+    // updateFile();
     
    });
